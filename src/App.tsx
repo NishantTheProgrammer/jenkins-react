@@ -1,33 +1,18 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [num1, setNum1] = useState(0)
+  const [num2, setNum2] = useState(0)
+  const [result, setResult] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React by Nishant The Programmer Ultimate</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>Calculator</h1>
+      <input type="number" value={num1} onChange={(e) => setNum1(Number(e.target.value))} />
+      <input type="number" value={num2} onChange={(e) => setNum2(Number(e.target.value))} />
+      <button onClick={() => setResult(num1 + num2)}>Add</button>
+      <p>Result: {result}</p>
     </>
   )
 }
