@@ -1,6 +1,6 @@
 describe('template spec', () => {
   it('passes', () => {
-    cy.visit('http://localhost:80')
+    cy.visit('http://localhost:3000')
     cy.get('input[type="number"]').first().type('10')
     cy.get('input[type="number"]').last().type('20')
     cy.get('button').click()
