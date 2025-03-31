@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className="calculator">
-      <h1>Calculator</h1>
+      <h1>Calculator - blue</h1>
       <div className="calculator-grid">
         <input 
           type="number" 
