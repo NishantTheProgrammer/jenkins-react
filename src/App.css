@@ -40,3 +40,80 @@
 .read-the-docs {
   color: #888;
 }
+
+.calculator {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.calculator-grid {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+input {
+  padding: 0.8rem;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #646cff;
+}
+
+button {
+  padding: 0.8rem;
+  background: #646cff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background: #4c51bf;
+}
+
+.result {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.result span {
+  font-weight: bold;
+  color: #646cff;
+}
+
+/* Optional: Add dark mode support */
+@media (prefers-color-scheme: dark) {
+  .calculator {
+    background: #1a1a1a;
+  }
+
+  h1 {
+    color: #fff;
+  }
+
+  input {
+    background: #2a2a2a;
+    color: white;
+    border-color: #333;
+  }
+}
