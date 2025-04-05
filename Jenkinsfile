@@ -11,10 +11,12 @@ pipeline {
           
             steps {
                 sh '''
+                sudo chown -R $(whoami) ~/.npm
                 echo 'hello world'
                 npm --version
                 node --version
                 ls
+                npm cache clean --force
                 npm i -f
                 npm run build
                 ls
