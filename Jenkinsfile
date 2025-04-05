@@ -6,16 +6,18 @@ pipeline {
             agent{
                 docker{
                     image 'node:18-alpine'
+                    args '--user node'
                 }
             }
           
             steps {
                 sh '''
-                sudo chown -R $(whoami) ~/.npm
                 echo 'hello world'
                 npm --version
                 node --version
                 ls
+                npm config get cache
+                npm config get prefix
                 npm cache clean --force
                 npm i -f
                 npm run build
