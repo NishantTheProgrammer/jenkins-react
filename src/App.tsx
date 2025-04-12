@@ -29,9 +29,9 @@ function App() {
         <button onClick={calculate}>
           Calculate
         </button>
-      </div>
-      <div className="result">
-        <p>Result: <span>{result}</span></p>
+        <div className="result">
+          <p>Result: <span>{result}</span></p>
+        </div>
       </div>
     </div>
   )
