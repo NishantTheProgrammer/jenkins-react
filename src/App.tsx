@@ -7,7 +7,7 @@ function App() {
   const [result, setResult] = useState(0)
 
   const calculate = () => {
-    setResult(Number(num1) + Number(num2))
+    setResult(Number(num1) - Number(num2))
   }
 
   return (
